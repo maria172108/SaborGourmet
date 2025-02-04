@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Restaurante Sabor Gourmet</title>
+    <link rel="stylesheet" type="text/css" href="reservas.css" media="screen" />
+    <meta charset="utf-8">
+  </head>
+  <header class="navbar">
+    
+    <nav>
+        <ul>
+          <div class="logo">Sabor Gourmet</div>
+      <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="menu.html">Cardápio</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header> 
+  <body>
+    <div class="container">
+        <h2>Faça sua Reserva</h2>
+        <form id="reservaForm">
+            <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+            <input type="datetime-local" id="dataHora" name="dataHora" required>
+            <input type="number" id="pessoas" name="pessoas" min="1" placeholder="Número de Pessoas" required>
+            <textarea id="preferencias" name="preferencias" placeholder="Preferências Especiais"></textarea>
+            <button type="submit">Reservar</button>
+        </form>
+        <div class="reserva-info" id="reservaInfo">
+            <h3>Detalhes da Reserva:</h3>
+            <p><strong>Nome:</strong> <span id="reservaNome"></span></p>
+            <p><strong>Data e Hora:</strong> <span id="reservaDataHora"></span></p>
+            <p><strong>Número de Pessoas:</strong> <span id="reservaPessoas"></span></p>
+            <p><strong>Preferências Especiais:</strong> <span id="reservaPreferencias"></span></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("reservaForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let nome = document.getElementById("nome").value;
+            let dataHora = document.getElementById("dataHora").value;
+            let pessoas = document.getElementById("pessoas").value;
+            let preferencias = document.getElementById("preferencias").value;
+
+            if (!nome || !dataHora || !pessoas) {
+                alert("Por favor, preencha todos os campos obrigatórios.");
+                return;
+            }
+
+            document.getElementById("reservaNome").textContent = nome;
+            document.getElementById("reservaDataHora").textContent = dataHora;
+            document.getElementById("reservaPessoas").textContent = pessoas;
+            document.getElementById("reservaPreferencias").textContent = preferencias ? preferencias : "Nenhuma";
+            document.getElementById("reservaInfo").style.display = "block";
+        });
+    </script>
+</body>
+</html>
+
