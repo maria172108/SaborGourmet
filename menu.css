@@ -2,11 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
 body {
-
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -14,46 +13,82 @@ body {
     /* color: #eeebeb;  */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+}
+
+main {
+    display: flex;
+    padding: 20px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+}
+
+.text p {
+    font-size: 1.1rem;
+    font-weight: 100;
+    text-align: justify;
+    color: #251709;
+}
+
+.container img {
+    width: 770px;
+    height: 570px;
+    left: 10px;
+    top: 107px;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color:#5e370f;
-    padding: 15px 20px;
+    justify-content: center;
+    background-color: #5e370f;
+    padding: 08px 20px;
 }
+
 .logo {
     color: #ff9900;
     font-size: 24px;
     font-weight: bold;
-    margin-top: 10px;
+   
 }
+
+
 .menu {
     display: flex;
+    justify-content: center;
     list-style: none;
 }
-.menu li {
-    margin: 3px 0px;
-    margin-left: 195px;
-}
-.menu a {
-    text-decoration: none;
-    color: white;
-    padding: 30px;
-}
-.menu a:hover {
-    background-color: #8a4f13;
-    border-radius: 30px;
-    padding: 15px 20px;
+
+h1 {
+    text-align: center;
     
 }
 
+.menu li {
+    margin: 10px 0;
+    padding: 0 20px;
 
+}
 
+.menu a {
+    text-decoration: none;
+    color: white;
+    /* padding: 30px; */
 
+}
 
+.menu a:hover {
+    background-color: #8a4f13;
+    border-radius: 30px;
+    /* padding: 15px 20px; */
+
+}
 
 h1 {
     text-align: center;
@@ -68,6 +103,7 @@ h1 {
     color: white;
     padding: 10px;
     border-radius: 5px;
+    text-align: center;
 }
 table {
     width: 100%;
@@ -85,4 +121,30 @@ img {
     width: 150px;
     height: auto;
     border-radius: 8px;
+}
+
+
+
+
+
+
+img:hover {
+    transform: scale(1.4);
+}
+
+.dish-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    
+}
+
+.dish-container img {
+    border-radius: 10px;
+    
+}
+
+.description {
+    max-width: 100%;
 }
